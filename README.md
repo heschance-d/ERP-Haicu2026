@@ -1,17 +1,21 @@
 # ERP-Haicu2026
 
-This repository contains the prototype code used for the user study reported. The system compares two interface conditions for RAG-based cultural heritage search:
-- System A: low-transparency interface with direct synthesised answers.
-- System B: high-transparency interface with in-text citations, source/provenance panel, and source-based perspectives.
+This repository contains the prototype code used in our study on interface transparency in RAG-based cultural heritage search.
+The prototype compares two interface conditions:
+- **System A:** low-transparency RAG interface with direct synthesised answers.
+- **System B:** high-transparency RAG interface with in-text citations, archival evidence, provenance cues, and source-based perspectives.
 
-## Repository structure
+## How to run in Google Colab
+1. Open `ERP_RAG.ipynb`.
+2. Add the following secrets in Colab:
+   - `GOOGLE_API_KEY`
+   - `FILE_SEARCH_STORE_NAME`
+3. Run all cells.
 
-- `app.py`: main application file.
-- `prompts/`: prompts used for the two interface conditions.
-- `interface/`: interface components for System A and System B.
-- `screenshots/`: screenshots of the two study interfaces.
-- `data_sample/`: small sample or mock data for illustration only.
+## How to run locally
 
-## Data availability
-
-The original study data, including participant transcripts, chatlogs, and mouse-tracking data, are not included in this repository due to privacy and ethical considerations.
+```bash
+pip install -r requirements.txt
+export GOOGLE_API_KEY="your-api-key"
+export FILE_SEARCH_STORE_NAME="your-file-search-store-name"
+python app.py
